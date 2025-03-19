@@ -1,4 +1,4 @@
-# Evaluation_et_gestion_medicale
+# Evaluation et gestion medicale
 
 # Guide d'installation et d'exécution d'un projet Django 🚀
 
