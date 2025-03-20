@@ -8,7 +8,25 @@ Avant de commencer, assurez-vous d'avoir installé :
 - Python 
 - pip (gestionnaire de paquets Python)
 - virtualenv (optionnel mais recommandé)
+- pdfkit
+## Keep in mind
 
+C'est essentiel d'installer wkhtmltopdf pour faire fonctionner pdfkit parce que pdfkit est simplement une interface Python qui s'appuie sur wkhtmltopdf pour convertir des pages HTML en PDF.
+
+📌 Pourquoi pdfkit a besoin de wkhtmltopdf ?
+pdfkit ne fait pas la conversion lui-même
+→ Il envoie simplement des commandes à wkhtmltopdf pour effectuer la conversion.
+
+wkhtmltopdf est un moteur de rendu basé sur WebKit
+→ Il prend du HTML, le "rend" comme un navigateur, et génère un PDF.
+
+Sans wkhtmltopdf, pdfkit ne peut pas fonctionner
+→ Si wkhtmltopdf n'est pas installé, pdfkit ne sait pas quoi exécuter et renvoie une erreur du type :
+
+sh
+Copier
+Modifier
+No wkhtmltopdf executable found
 ## Installation
 1. Créer un environnement virtuel (optionnel mais recommandé)
 
