@@ -1,0 +1,8 @@
+#la liste des dépendances installées
+#pour installer ces dépendances sur un autre serveur ou machine, utilise :
+#pip install -r requirements.txt
+asgiref==3.8.1
+Django==5.1.7
+pdfkit==1.0.0
+sqlparse==0.5.3
+tzdata==2025.1

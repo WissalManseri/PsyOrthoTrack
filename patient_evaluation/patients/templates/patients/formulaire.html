@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajouter un Patient</title>
+</head>
+<body>
+    <h2>Ajouter un Patient</h2>
+
+    <!-- 🔥 Affichage du message de succès -->
+    {% if messages %}
+        {% for message in messages %}
+            <p style="color: green;">{{ message }}</p>
+        {% endfor %}
+    {% endif %}
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Enregistrer</button>
+    </form>
+    <hr>
+
+    <!-- ✅ Boutons pour PDF, impression et liste -->
+    <a href="{% url 'liste_patients' %}"><button>📋 Voir la liste des patients</button></a>
+
+</body>
+</html>
