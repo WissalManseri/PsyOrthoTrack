@@ -23,10 +23,8 @@ wkhtmltopdf est un moteur de rendu basé sur WebKit
 Sans wkhtmltopdf, pdfkit ne peut pas fonctionner
 → Si wkhtmltopdf n'est pas installé, pdfkit ne sait pas quoi exécuter et renvoie une erreur du type :
 
-sh
-Copier
-Modifier
-No wkhtmltopdf executable found
+
+                No wkhtmltopdf executable found
 ## Installation
 1. Créer un environnement virtuel (optionnel mais recommandé)
 
