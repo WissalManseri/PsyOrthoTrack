@@ -1,5 +1,5 @@
-#$env:Path += ";C:\Program Files\Git\bin;C:\Program Files\Git\cmd"
-#>> git --version
-#echo "env/" >> .gitignore
+$env:Path += ";C:\Program Files\Git\bin;C:\Program Files\Git\cmd"
+ git --version
+echo "env/" >> .gitignore
 #pour installer ces dépendances sur un autre serveur ou machine, utilise :
 #pip install -r requirements.txt
