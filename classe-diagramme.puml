@@ -1,0 +1,73 @@
+@startuml
+
+class Patient {
+    +id: int
+    +nom: String
+    +prenom: String
+    +dateNaissance: Date
+    +adresse: String
+    +telephone: String
+}
+
+class Consultation {
+    +id: int
+    +date: Date
+    +notes: String
+    +diagnostic: String
+    +ajouterNote()
+    +modifierNote()
+}
+
+class Orthophoniste {
+    +id: int
+    +nom: String
+    +prenom: String
+    +specialisation: String
+    +telephone: String
+    +ajouterDossierMedical()
+    +mettreAJourDossierMedical()
+    +planifierConsultation()
+    +ajouterPatient()
+}
+
+class Exercice {
+    +id: int
+    +nom: String
+    +description: String
+    +niveauDifficulte: String
+    +attribuerAuPatient()
+}
+
+class Evaluation {
+    +id: int
+    +score: int
+    +commentaire: String
+    +ajouterEvaluation()
+}
+
+class DossierMedical {
+    +id: int
+    +historique: String
+    +suiviMedical: String
+    +ajouterHistorique()
+    +mettreAJourSuivi()
+}
+
+class RendezVous {
+    +id: int
+    +date: Date
+    +heure: String
+    +lieu: String
+    +confirmerRendezVous()
+}
+
+Patient "1" -- "1" DossierMedical : possède
+DossierMedical "1" -- "*" Consultation : contient
+DossierMedical "1" -- "*" Evaluation : inclut
+Patient "1" -- "*" Consultation : subit
+Orthophoniste "1" -- "*" Consultation : effectue
+Patient "1" -- "*" Exercice : pratique
+Patient "1" -- "*" RendezVous : planifie
+Orthophoniste "1" -- "*" RendezVous : organise
+
+@enduml
