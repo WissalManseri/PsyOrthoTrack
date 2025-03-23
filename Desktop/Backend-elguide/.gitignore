@@ -1,0 +1,11 @@
+# Dossiers système Windows  
+*.ini  
+*.log  
+.DS_Store  
+
+# Dossiers spécifiques  
+.vscode/  
+.idea/  
+node_modules/  
+__pycache__/  
+.env  
