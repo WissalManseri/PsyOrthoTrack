@@ -8,9 +8,9 @@
 <body>
     <h1>Supprimer le Patient</h1>
     <p>Êtes-vous sûr de vouloir supprimer {{ patient.first_name }} {{ patient.last_name }} ?</p>
-    <form method="post">
+    <form method="post" action="{% url 'delete_patient' patient.pk %}">
         {% csrf_token %}
-        <button type="submit">Supprimer</button>
+        <button type="submit">Supprimer Patient</button>
         <a href="{% url 'patient_list' %}">Annuler</a>
     </form>
 </body>
