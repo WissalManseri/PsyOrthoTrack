@@ -3,8 +3,8 @@ from .models import PatientProfile, MedicalRecord
 
 @admin.register(PatientProfile)
 class PatientProfileAdmin(admin.ModelAdmin):
-    list_display = ('first_name', 'last_name', 'date_of_birth', 'age', 'gender', 'phone_number_1')
-    list_filter = ('first_name', 'last_name')
+    list_display = ('first_name', 'last_name', 'date_of_birth', 'gender')
+    list_filter = ('gender', 'created_at') #, 'created_at'
     search_fields = ('first_name', 'last_name', 'phone_number_1')
     ordering = ('last_name', 'first_name')
 

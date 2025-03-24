@@ -3,14 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Ajouter un Patient</title>
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <!-- <link rel="stylesheet" > -->
 </head>
 <body>
     <h1>Ajouter un Patient</h1>
-    <form method="post" enctype="multipart/form-data">
+    <form method="post" enctype="multipart/form-data" action="{% url 'add_patient' %}">
         {% csrf_token %}
         {{ form.as_p }}
-        <button type="submit">Ajouter</button>
+        <button type="submit">Ajouter Patient</button>
     </form>
+
+    <!-- ✅ Boutons pour PDF, impression et liste -->
+    <a href="{% url 'patient_list' %}"><button> Voir la liste des patients</button></a>
+    
 </body>
 </html>
