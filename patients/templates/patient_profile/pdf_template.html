@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Fiche Patient</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        h1 { color: #007BFF; }
+        .container { border: 1px solid #ddd; padding: 15px; border-radius: 10px; }
+    </style>
+</head>
+<body>
+    <h1>Fiche Patient</h1>
+    <div class="container">
+        <p><strong>Nom :</strong> {{ patient.last_name }}</p>
+        <p><strong>Prénom :</strong> {{ patient.first_name }}</p>
+        <p><strong>Date de naissance :</strong> {{ patient.date_of_birth }}</p>
+        <p><strong>Âge :</strong> {{ patient.age }}</p>
+        <p><strong>Sexe :</strong> {{ patient.get_gender_display }}</p>
+        <p><strong>Adresse :</strong> {{ patient.address }}</p>
+        <p><strong>Téléphone :</strong> {{ patient.phone_number_1 }}</p>
+        {% if patient.phone_number_2 %}
+            <p><strong>Téléphone secondaire :</strong> {{ patient.phone_number_2 }}</p>
+        {% endif %}
+        {% if patient.email %}
+            <p><strong>Email :</strong> {{ patient.email }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>

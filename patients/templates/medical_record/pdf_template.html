@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Fiche Dossier Médical</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        h1 { color: #007BFF; }
+        .container { border: 1px solid #ddd; padding: 15px; border-radius: 10px; }
+    </style>
+</head>
+<body>
+    <h1>Fiche Dossier Médical</h1>
+    <div class="container">
+        <p><strong>Patient :</strong> {{ medical_record.patient.first_name }} {{ medical_record.patient.last_name }}</p>
+        <p><strong>Date du dossier :</strong> {{ medical_record.record_date }}</p>
+        <p><strong>Description :</strong> {{ medical_record.description }}</p>
+        <p><strong>Prescription :</strong> {{ medical_record.prescription }}</p>
+    </div>
+</body>
+</html>
