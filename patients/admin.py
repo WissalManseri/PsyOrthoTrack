@@ -1,5 +1,13 @@
-from django.contrib import admin
+from django.contrib  import admin
+from django.contrib.admin.sites import AdminSite
 from .models import PatientProfile, MedicalRecord
+
+admin_site = admin.AdminSite(name='custom_admin')
+
+admin.site.site_header = "Gestion des Patients"
+admin.site.site_title = "Admin - Gestion des Patients"
+admin.site.index_title = "Tableau de Bord"
+
 
 @admin.register(PatientProfile)
 class PatientProfileAdmin(admin.ModelAdmin):
